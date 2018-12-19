@@ -19,8 +19,10 @@
     <div class="row" id="Latest Mars News">
       <div class="col-md-12">
         <h3>Latest Mars News</h3>
-        <h4>{{mars_data.news_story}}</h4>
-        <h5>{{mars_data.news_story}}</h5>
+        <h4>
+          {{mars_data.news_story[0]}}
+        </h4>
+        <h5>{{mars_data.news_story[1]}}</h5>
       </div>  
     </div>
   </div>
@@ -47,47 +49,48 @@
         <div class="col-md-12">
             <h3>Mars Hemispheres</h3>
           <div class="card-group">
-            <div class = "col-md-4">
+            <div class = "col-md-6">
               <!-- Hemisphere 1-->
               <div class="card">
-                <img class="card-img-top" src="{{mars_data.mars_hemispheres}}" alt="Card image cap">
+                <img class="card-img-top" src="{{mars_data.mars_hemispheres[0]['Cerberus Hemisphere Enhanced']}}"alt= "Card image cap" style="width: 30rem;">
                 <div class="card-body">
-                  <h5 class="card-title">{{mars_data.mars_hemispheres[1]}}</h5>
+                  <h4 class="card-title">Cerberus Hemisphere</h4>
                 </div>
                 <div class="card-footer">
                 </div>
               </div>          
               <!-- Hemisphere 2-->
               <div class="card">
-                  <img class="card-img-top" src="{{mars_data.mars_hemispheres}}" alt="Card image cap">
+                  <img class="card-img-top" src="{{mars_data.mars_hemispheres[1]['Schiaparelli Hemisphere Enhanced']}}" alt="Card image cap" style="width: 30rem;">
                   <div class="card-body">
-                    <h5 class="card-title">{{mars_data.mars_hemispheres[0]}}</h5>
+                    <h4 class="card-title">Schiaparelli Hemisphere</h4>
                   </div>
                   <div class="card-footer">
                   </div>
               </div>
             </div>
-            <div class = "col-md-4">
+            <div class = "col-md-6">
               <div class="card-group">
                 <div class="card">
-                  <img class="card-img-top" src="{{mars_data.mars_hemispheres}}" alt="Card image cap">
+                  <img class="card-img-top" src="{{mars_data.mars_hemispheres[2]['Syrtis Major Hemisphere Enhanced']}}" alt="Card image cap" style="width: 30rem;">
                   <div class="card-body">
-                    <h5 class="card-title">{{mars_data.mars_hemispheres[2]}}</h5>
+                    <h4 class="card-title">Syrtis Major Hemisphere</h4>
                   </div>
                   <div class="card-footer">
                   </div>
                 </div>
               </div>
                 <div class="card">
-                  <img class="card-img-top" src="{{mars_data.mars_hemispheres}}" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">{{mars_data.mars_hemispheres[3]}}</h5>
+                  <img class="card-img-top" src="{{mars_data.mars_hemispheres[3]['Valles Marineris Hemisphere Enhanced']}}" alt="Card image cap" style="width: 30rem;">
+                    <div class="card-body" >
+                      <h4 class="card-title">Valles Marineris Hemisphere</h4>
                     </div>
                     <div class="card-footer">
                     </div>
                 </div>
               </div>  
-            </div> 
+            </div>
+          </div> 
       </div>
     </div>
   </div>
