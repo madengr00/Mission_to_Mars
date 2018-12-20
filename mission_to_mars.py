@@ -105,14 +105,11 @@ def scrape_info():
 
     titles_and_urls = []
     #Create empty lists to store url and title
-    #image_url_list = []
-    #title_list =[]
 
     #Scrape the url and title, store in lists
     for record in hemisphere:
         try:
             #Capture the title
-            #title_list.append(record)
             title = record.text
             #Click on the link
             browser.click_link_by_partial_text('Enhanced')
@@ -120,19 +117,12 @@ def scrape_info():
             downloads = browser.find_link_by_text('Sample').first
             image_url = downloads['href']
             #Capture the sample image url
-            #image_url_list.append(image_url)
             title_and_url = {title:image_url}
-            #title_and_url = zip(title, image_url)
-            #title_and_url = set(title_and_url)
             titles_and_urls.append(title_and_url)
             print(title_and_url)
         except ElementDoesNotExist:
             print("Scraping Complete")
 
-    # use zip() to map values
-    #titles_and_urls = zip(title_list, image_url_list)
-    # convert values to print as a set
-    #titles_and_urls = set(titles_and_urls)
     print(titles_and_urls)
     mars_data["mars_hemispheres"] = (titles_and_urls)
     
